@@ -24,12 +24,60 @@ body {
 .space-bg {
   background-color: var(--background);
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(109, 40, 217, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 25% 25%, rgba(109, 40, 217, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+}
+
+.hero-bg {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(76, 29, 149, 0.1) 0%, rgba(30, 58, 138, 0.1) 100%);
+  z-index: 0;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 50;
+}
+
+/* Add specific styles for the Typewriter container */
+.Typewriter {
+  position: relative;
+  z-index: 50;
+  display: inline-block;
+  mix-blend-mode: normal;
+}
+
+.text-gradient {
+  position: relative;
+  z-index: 50;
+  isolation: isolate;
+  background-clip: text;
+  -webkit-background-clip: text;
+  mix-blend-mode: normal;
 }
 
 .glow-text {
-  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+  text-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+  position: relative;
+  z-index: 50;
+  isolation: isolate;
 }
 
 .card {
@@ -73,10 +121,10 @@ body {
 }
 
 .grid-pattern {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 2;
 }
 
 /* Scrollbar styling */
@@ -301,6 +349,9 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   animation: gradient 3s linear infinite;
+  position: relative;
+  z-index: 10;
+  mix-blend-mode: normal;
 }
 
 @keyframes gradient {
@@ -353,5 +404,44 @@ body {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+.light-beam {
+  width: 150px;
+  height: 800px;
+  background: linear-gradient(180deg, rgba(147, 51, 234, 0.15) 0%, rgba(79, 70, 229, 0) 100%);
+  transform: rotate(-45deg);
+  animation: moveBeam 8s infinite;
+  z-index: 3;
+}
+
+@keyframes moveBeam {
+  0% {
+    transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: rotate(-45deg) translateX(50%) translateY(50%);
+  }
+}
+
+.glow-point {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.2) 0%, rgba(147, 51, 234, 0) 70%);
+  border-radius: 50%;
+  animation: pulse 4s infinite;
+  z-index: 4;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1.2);
   }
 }

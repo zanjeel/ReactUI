@@ -18,7 +18,7 @@ const Header: React.FC = () => {
         <Link to="/" className="flex items-center space-x-2">
           <Rocket className="h-6 w-6 text-purple-500" />
           <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-emerald-500">
-            ReactBits
+            ReactUI
           </span>
         </Link>
 
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
             Showcase
           </Link>
           <a 
-            href="https://github.com" 
+            href="https://github.com/zanjeel/ReactUI" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-4 py-2 bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-md hover:from-purple-700 hover:to-purple-900 transition-all duration-300"
@@ -88,7 +88,7 @@ const Header: React.FC = () => {
               Showcase
             </Link>
             <a 
-              href="https://github.com" 
+              href="https://github.com/zanjeel/ReactUI" 
               target="_blank" 
               rel="noopener noreferrer"
               className="px-4 py-2 bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-md hover:from-purple-700 hover:to-purple-900 transition-all duration-300 inline-block"

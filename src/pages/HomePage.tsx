@@ -34,28 +34,55 @@ const HomePage: React.FC = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 grid-pattern opacity-20"></div>
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="hero-bg py-20 md:py-32 relative overflow-hidden">
+        {/* Background layers */}
+        <div className="absolute inset-0 grid-pattern opacity-30"></div>
+        
+        {/* Light beams */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="light-beam absolute -left-20 top-0"></div>
+          <div className="light-beam absolute right-1/4 top-1/4" style={{ animationDelay: '-2s' }}></div>
+          <div className="light-beam absolute left-1/3 top-1/2" style={{ animationDelay: '-4s' }}></div>
+        </div>
+
+        {/* Glowing orbs */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
+          className="absolute inset-0 pointer-events-none"
+        >
+          <div className="absolute h-32 w-32 bg-purple-500/20 rounded-full blur-3xl top-1/4 left-1/4 animate-pulse"></div>
+          <div className="absolute h-40 w-40 bg-blue-500/20 rounded-full blur-3xl bottom-1/4 right-1/4 animate-pulse delay-1000"></div>
+          <div className="absolute h-24 w-24 bg-emerald-500/20 rounded-full blur-3xl top-1/3 right-1/3 animate-pulse delay-2000"></div>
+          
+          {/* Additional glow points */}
+          <div className="glow-point top-1/4 left-1/3"></div>
+          <div className="glow-point bottom-1/3 right-1/4" style={{ animationDelay: '-2s' }}></div>
+          <div className="glow-point top-1/2 right-1/3" style={{ animationDelay: '-3s' }}></div>
+        </motion.div>
+
+        {/* Content */}
+        <div className="container relative mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center hero-content">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
-              className="space-y-6"
+              className="space-y-6 relative"
             >
-              <motion.div variants={fadeIn}>
-                <span className="inline-block px-3 py-1 bg-purple-900/30 text-purple-400 text-sm font-medium rounded-full mb-4">
+              <motion.div variants={fadeIn} className="relative">
+                <span className="inline-block px-3 py-1 bg-purple-900/30 text-purple-400 text-sm font-medium rounded-full mb-4 backdrop-blur-sm">
                   React UI Components
                 </span>
               </motion.div>
               
               <motion.h1 
                 variants={fadeIn}
-                className="text-4xl md:text-6xl font-bold text-white mb-6"
+                className="text-4xl md:text-6xl font-bold text-white mb-6 glow-text"
               >
-                Beautiful React Components for{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-emerald-400">
+                <span className="relative">Beautiful React Components for{' '}</span>
+                <span className=" bg-clip-text bg-gradient-to-r from-purple-400 to-emerald-400 text-gradient">
                   <Typewriter
                     options={{
                       strings: ['Developers', 'Designers', 'Creators', 'Everyone'],
@@ -68,7 +95,7 @@ const HomePage: React.FC = () => {
               
               <motion.p 
                 variants={fadeIn}
-                className="text-gray-400 text-lg md:text-xl mb-8"
+                className="text-gray-300 text-lg md:text-xl mb-8 backdrop-blur-sm bg-black/10 rounded-lg p-4 relative"
               >
                 A collection of modern, responsive React components with stunning animations and effects. 
                 Ready to use in your next project.
@@ -76,11 +103,11 @@ const HomePage: React.FC = () => {
               
               <motion.div 
                 variants={fadeIn}
-                className="flex flex-col sm:flex-row justify-center gap-4"
+                className="flex flex-col sm:flex-row justify-center gap-4 relative"
               >
                 <Link 
                   to="/components" 
-                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-800 text-white font-medium rounded-md hover:from-purple-700 hover:to-purple-900 transition-all duration-300 flex items-center justify-center"
+                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-800 text-white font-medium rounded-md hover:from-purple-700 hover:to-purple-900 transition-all duration-300 flex items-center justify-center backdrop-blur-sm shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30"
                 >
                   Explore All Components <ArrowRight size={18} className="ml-2" />
                 </Link>
@@ -88,7 +115,7 @@ const HomePage: React.FC = () => {
                   href="https://github.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="px-6 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-all duration-300 flex items-center justify-center"
+                  className="px-6 py-3 bg-gray-800/80 backdrop-blur-sm text-white font-medium rounded-md hover:bg-gray-700/80 transition-all duration-300 flex items-center justify-center shadow-lg shadow-gray-500/10 hover:shadow-gray-500/20"
                 >
                   View on GitHub <Star size={18} className="ml-2" />
                 </a>
@@ -208,7 +235,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="inline-block px-3 py-1 bg-purple-900/30 text-purple-400 text-sm font-medium rounded-full mb-4">
-              Why Choose ReactBits
+              Why Choose ReactUI
             </span>
             <h2 className="text-3xl font-bold text-white mb-4">Built for Modern React Applications</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
@@ -264,7 +291,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Build Something Amazing?</h2>
             <p className="text-gray-300 mb-8">
-              Start using ReactBits components in your project today and create stunning user interfaces.
+              Start using ReactUI components in your project today and create stunning user interfaces.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link 

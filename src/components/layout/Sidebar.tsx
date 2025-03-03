@@ -155,7 +155,7 @@ const Sidebar: React.FC = () => {
         <h3 className="text-white font-medium mb-2">Need help?</h3>
         <p className="text-gray-400 text-sm mb-3">Check out our documentation or join our community.</p>
         <a 
-          href="https://github.com" 
+          href="https://github.com/zanjeel/ReactUI" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-sm text-purple-400 hover:text-purple-300 flex items-center"

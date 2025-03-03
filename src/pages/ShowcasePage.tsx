@@ -16,7 +16,7 @@ const ShowcasePage: React.FC = () => {
     {
       id: 2,
       title: 'Quantum Portfolio',
-      description: 'A creative portfolio site for a digital artist using ReactBits components.',
+      description: 'A creative portfolio site for a digital artist using ReactUI components.',
       image: 'https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
       url: 'https://quantum.io',
       author: 'Michael Chen'
@@ -32,7 +32,7 @@ const ShowcasePage: React.FC = () => {
     {
       id: 4,
       title: 'Cosmic Blog',
-      description: 'A space-themed blog with ReactBits text animations and cards.',
+      description: 'A space-themed blog with ReactUI text animations and cards.',
       image: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
       url: 'https://cosmicblog.space',
       author: 'Emma Wilson'
@@ -64,7 +64,7 @@ const ShowcasePage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center mb-8 md:mb-16">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Showcase</h1>
             <p className="text-gray-400">
-              Explore amazing projects built with ReactBits components.
+              Explore amazing projects built with ReactUI components.
             </p>
           </div>
           
@@ -84,10 +84,10 @@ const ShowcasePage: React.FC = () => {
           <div className="max-w-2xl mx-auto mt-12 md:mt-20 text-center">
             <h2 className="text-xl md:text-2xl font-bold text-white mb-4">Submit Your Project</h2>
             <p className="text-gray-400 mb-8">
-              Built something amazing with ReactBits? We'd love to feature your project in our showcase.
+              Built something amazing with ReactUI? We'd love to feature your project in our showcase.
             </p>
             <a 
-              href="https://github.com" 
+              href="https://github.com/zanjeel/ReactUI" 
               target="_blank" 
               rel="noopener noreferrer"
               className="px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-800 text-white font-medium rounded-md hover:from-purple-700 hover:to-purple-900 transition-all duration-300 inline-block"

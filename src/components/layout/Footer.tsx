@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             <Link to="/" className="flex items-center space-x-2">
               <Rocket className="h-6 w-6 text-purple-500" />
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-emerald-500">
-                ReactBits
+                ReactUI
               </span>
             </Link>
             <p className="text-gray-400 text-sm">
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">
+                <a href="https://github.com/zanjeel/ReactUI" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">
                   GitHub
                 </a>
               </li>
@@ -64,16 +64,13 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://github.com/zanjeel/ReactUI" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://www.linkedin.com/in/zanjeel-tariq-sahi" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:info@reactbits.dev" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="mailto:zanjeel123@gmail.com" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Mail size={20} />
               </a>
             </div>
@@ -82,7 +79,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} ReactBits. All rights reserved.
+            © {new Date().getFullYear()} ReactUI. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0 flex space-x-6">
             <a href="#" className="text-gray-500 hover:text-purple-400 transition-colors text-sm">

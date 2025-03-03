@@ -17,7 +17,7 @@ const TypewriterExample = () => {
     <div className="text-2xl font-bold">
       <Typewriter
         options={{
-          strings: ['Hello World!', 'Welcome to ReactBits', 'Typewriter Effect'],
+          strings: ['Hello World!', 'Welcome to ReactUI', 'Typewriter Effect'],
           autoStart: true,
           loop: true,
         }}
@@ -42,7 +42,7 @@ export default TypewriterExample;`;
               <div className="text-2xl font-bold text-white">
                 <Typewriter
                   options={{
-                    strings: ['Hello World!', 'Welcome to ReactBits', 'Typewriter Effect'],
+                    strings: ['Hello World!', 'Welcome to ReactUI', 'Typewriter Effect'],
                     autoStart: true,
                     loop: true,
                   }}
