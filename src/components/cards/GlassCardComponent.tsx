@@ -79,7 +79,7 @@ export default GlassCard;`;
                   </p>
                   
                   <div className="flex justify-between items-center">
-                    <span className="text-xs text-gray-400">Created by ReactUI</span>
+                    <span className="text-xs text-gray-400">Created by React</span>
                     <button className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm rounded-md transition-colors">
                       Explore
                     </button>
